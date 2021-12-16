@@ -1,19 +1,25 @@
 .fullscreen-layout {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
 }
 
 #breakpoint-watcher {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 8px;
-    border-radius: 8px;
-    font-family: monospace;
-    color: white;
-    background-color: black;
-    padding: 0px 8px;
-    z-index: 9999;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 8px;
+  border-radius: 8px;
+  font-family: monospace;
+  color: white;
+  background-color: black;
+  padding: 0px 8px;
+  z-index: 9999;
+}
+
+.img-destaque {
+  height: 256px;
+  object-fit: cover;
+  filter: blur(0.75px) brightness(70%);
 }

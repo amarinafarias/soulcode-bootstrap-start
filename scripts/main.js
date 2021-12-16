@@ -46,7 +46,7 @@ const news = [
     titulo: "Notícia bombástica",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptatum nihil dignissimos odio eum?",
     img: "./img/img1.png",
-    categoria: "saude",
+    categoria: "esportes",
   },
   {
     titulo: "Notícia bombástica",
@@ -83,7 +83,7 @@ class NoticiasBuilder {
           <div class="card-body">
             <h5 class="card-title">${news.titulo}</h5>
             <p class="card-text">${news.desc}</p>
-            <a href="#" class="btn btn-primary">Ler mais</a>
+            <button class="btn btn-primary" onclick="openModal('${news.img}', '${news.titulo}', '${news.desc}')">Ler mais</button>
           </div>
         </div>
       </div>
@@ -94,8 +94,18 @@ class NoticiasBuilder {
   }
 }
 
+function openModal(img, titulo, desc) {
+  const modal = new bootstrap.Modal(document.getElementById("exampleModal"));
+  const body = document.getElementById("modal-noticia");
+  body.innerHTML = `
+  <img src="${img}" class="img-fluid"/>
+  <h2>${titulo}</h2>
+  <p>${desc}</p>
+  `;
+  modal.show();
+}
+
 (function () {
   const gridEsportes = document.getElementById("grid-esportes");
   if (gridEsportes) gridEsportes.innerHTML = NoticiasBuilder.build("esportes");
-  
 })();

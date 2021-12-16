@@ -3,18 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <link
       rel="stylesheet"
       href="./styles/bootstrap-5.1.3/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./styles/styles.css" />
     <title>Notícias</title>
   </head>
   <body>
     <div id="breakpoint-watcher"></div>
     <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">Notícias</a>
+        <a class="navbar-brand" href="/"
+          ><img src="./img/logo.png" height="32" style="filter: invert()"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -31,6 +33,15 @@
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
         >
+          <div class="offcanvas-header">
+            <img src="./img/logo.png" height="32" style="filter: invert()" />
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item dropdown">
@@ -88,6 +99,97 @@
         </div>
       </div>
     </nav>
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./img/girl1.jpg"
+            class="d-block w-100 img-destaque"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Notícia em destaque 1</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+              autem expedita porro, eligendi iusto quis.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./img/girl1.jpg"
+            class="d-block w-100 img-destaque"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Notícia em destaque 2</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+              autem expedita porro, eligendi iusto quis.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./img/girl1.jpg"
+            class="d-block w-100 img-destaque"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Notícia em destaque 3</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+              autem expedita porro, eligendi iusto quis.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
     <section class="container my-3">
       <h3 id="esportes">Esportes</h3>
@@ -158,6 +260,38 @@
         </div> -->
       </div>
     </section>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Notícia</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div id="modal-noticia" class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./scripts/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/main.js"></script>
