@@ -97,4 +97,5 @@ class NoticiasBuilder {
 (function () {
   const gridEsportes = document.getElementById("grid-esportes");
   if (gridEsportes) gridEsportes.innerHTML = NoticiasBuilder.build("esportes");
+  
 })();
