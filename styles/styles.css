@@ -15,4 +15,5 @@
     color: white;
     background-color: black;
     padding: 0px 8px;
+    z-index: 9999;
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="./styles/bootstrap-5.1.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Feedback</title>
+  </head>
+  <body class="fullscreen-layout justify-content-center">
+    <div id="breakpoint-watcher"></div>
+
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <h3>Entre em contato</h3>
+            <p>Deixe sua opinião sobre os nossos serviços</p>
+            <div class="mb-3">
+              <div class="mb-3">
+                <label for="nome_completo" class="form-label"
+                  >Nome completo</label
+                >
+                <input type="text" class="form-control" id="nome_completo" />
+              </div>
+              <div class="mb-3">
+                <label for="servico" class="form-label">Serviço</label>
+                <select id="servico" class="form-select">
+                  <option selected disabled>
+                    Selecione o tipo de feedback
+                  </option>
+                  <option value="0">Sugestão</option>
+                  <option value="1">Reclamação</option>
+                  <option value="2">Denúncia</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="comentario">Comentário</label>
+                <textarea
+                  class="form-control"
+                  name="comentario"
+                  id="comentario"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
