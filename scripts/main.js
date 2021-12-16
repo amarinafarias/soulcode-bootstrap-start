@@ -30,6 +30,42 @@ const news = [
     img: "./img/img1.png",
     categoria: "esportes",
   },
+  {
+    titulo: "Notícia bombástica",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptatum nihil dignissimos odio eum?",
+    img: "./img/img1.png",
+    categoria: "esportes",
+  },
+  {
+    titulo: "Notícia bombástica",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptatum nihil dignissimos odio eum?",
+    img: "./img/img1.png",
+    categoria: "esportes",
+  },
+  {
+    titulo: "Notícia bombástica",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptatum nihil dignissimos odio eum?",
+    img: "./img/img1.png",
+    categoria: "saude",
+  },
+  {
+    titulo: "Notícia bombástica",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptatum nihil dignissimos odio eum?",
+    img: "./img/img1.png",
+    categoria: "saude",
+  },
+  {
+    titulo: "Notícia bombástica",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptatum nihil dignissimos odio eum?",
+    img: "./img/img1.png",
+    categoria: "saude",
+  },
+  {
+    titulo: "Notícia bombástica",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque voluptatum nihil dignissimos odio eum?",
+    img: "./img/img1.png",
+    categoria: "saude",
+  },
 ];
 
 class NoticiasBuilder {
