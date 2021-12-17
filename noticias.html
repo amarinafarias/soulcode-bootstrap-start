@@ -7,9 +7,11 @@
       rel="stylesheet"
       href="./styles/bootstrap-5.1.3/css/bootstrap.min.css"
     />
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Notícias</title>
   </head>
   <body>
+    <div id="breakpoint-watcher"></div>
     <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
       <div class="container-fluid">
         <a class="navbar-brand" href="/"
@@ -102,6 +104,18 @@
         </div>
       </div>
     </nav>
+
+    <section class="container my-3">
+      <h3 id="esportes">Esportes</h3>
+      <div id="grid-esportes" class="row"></div>
+    </section>
+
+    <section class="container my-3">
+        <h3 id="saude">Saúde</h3>
+        <div id="grid-saude" class="row"></div>
+      </section>
+
     <script src="./scripts/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>
