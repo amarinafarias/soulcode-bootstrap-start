@@ -105,7 +105,9 @@ function openModal(img, titulo, desc) {
   modal.show();
 }
 
-(function () {
-  const gridEsportes = document.getElementById("grid-esportes");
-  if (gridEsportes) gridEsportes.innerHTML = NoticiasBuilder.build("esportes");
-})();
+const gridEsportes = document.getElementById("grid-esportes");
+if (gridEsportes) gridEsportes.innerHTML = NoticiasBuilder.build("esportes");
+
+var toastLiveExample = document.getElementById("liveToast");
+var toast = new bootstrap.Toast(toastLiveExample);
+toast.show();
