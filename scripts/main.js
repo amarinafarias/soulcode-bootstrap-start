@@ -105,9 +105,43 @@ function openModal(img, titulo, desc) {
   modal.show();
 }
 
-const gridEsportes = document.getElementById("grid-esportes");
-if (gridEsportes) gridEsportes.innerHTML = NoticiasBuilder.build("esportes");
+function buildNoticias() {
+  const gridEsportes = document.getElementById("grid-esportes");
+  const gridSaude = document.getElementById("grid-saude");
+  if (gridEsportes) gridEsportes.innerHTML = NoticiasBuilder.build("esportes");
+  if (gridSaude) gridSaude.innerHTML = NoticiasBuilder.build("saude");
+}
+
+buildNoticias();
 
 var toastLiveExample = document.getElementById("liveToast");
-var toast = new bootstrap.Toast(toastLiveExample);
-toast.show();
+if (toastLiveExample) {
+  var toast = new bootstrap.Toast(toastLiveExample);
+  toast.show();
+}
+
+
+const form = document.forms.add_noticia;
+
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const titulo = form.titulo.value;
+    const desc = form.desc.value;
+    const categoria = form.categoria.value;
+    const img = form.img.files[0];
+
+    let reader = new FileReader();
+
+    reader.onload = function (e) {
+      news.push({ titulo, categoria, desc, img: e.target.result });
+      buildNoticias()
+    };
+
+    reader.readAsDataURL(img);
+  });
+}
+var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+  container: 'body'
+})

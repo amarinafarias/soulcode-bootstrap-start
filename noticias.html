@@ -191,74 +191,24 @@
       </button>
     </div>
 
+    <div class="container mt-2">
+      <button
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal2"
+      >
+        Adicionar notícia
+      </button>
+    </div>
+
     <section class="container my-3">
       <h3 id="esportes">Esportes</h3>
-      <div id="grid-esportes" class="row">
-        <!-- <div class="col-md-6 col-lg-4 col-xl-3 mt-3">
-          <div class="card">
-            <div class="card-header">
-              <img src="./img/img1.png" class="img-fluid" />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Notícia bombástica</h5>
-              <p class="card-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
-                voluptatum nihil dignissimos odio eum?
-              </p>
+      <div id="grid-esportes" class="row"></div>
+    </section>
 
-              <a href="#" class="btn btn-primary">Ler mais</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 mt-3">
-          <div class="card">
-            <div class="card-header">
-              <img src="./img/img1.png" class="img-fluid" />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Notícia bombástica</h5>
-              <p class="card-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
-                voluptatum nihil dignissimos odio eum?
-              </p>
-
-              <a href="#" class="btn btn-primary">Ler mais</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 mt-3">
-          <div class="card">
-            <div class="card-header">
-              <img src="./img/img1.png" class="img-fluid" />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Notícia bombástica</h5>
-              <p class="card-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
-                voluptatum nihil dignissimos odio eum?
-              </p>
-
-              <a href="#" class="btn btn-primary">Ler mais</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 col-xl-3 mt-3">
-          <div class="card">
-            <div class="card-header">
-              <img src="./img/img1.png" class="img-fluid" />
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Notícia bombástica</h5>
-              <p class="card-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
-                voluptatum nihil dignissimos odio eum?
-              </p>
-
-              <a href="#" class="btn btn-primary">Ler mais</a>
-            </div>
-          </div>
-        </div> -->
-      </div>
+    <section class="container my-3">
+      <h3 id="saude">Saúde</h3>
+      <div id="grid-saude" class="row"></div>
     </section>
 
     <div
@@ -293,6 +243,86 @@
       </div>
     </div>
 
+    <div
+      class="modal fade"
+      id="exampleModal2"
+      tabindex="-1"
+      aria-labelledby="exampleModal2Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModal2Label">
+              Adicionar notícia
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form name="add_noticia">
+              <div class="mb-3">
+                <label for="titulo">Título</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="titulo"
+                  id="titulo"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="img">Imagem</label>
+                <input
+                  type="file"
+                  accept=".jpg,.png"
+                  class="form-control"
+                  name="img"
+                  id="img"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="desc">Descrição</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="desc"
+                  id="desc"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="categoria">Descrição</label>
+                <select
+                  name="categoria"
+                  id="categoria"
+                  class="form-select"
+                  required
+                >
+                  <option selected disabled>Selecione uma categoria</option>
+                  <option value="esportes">Esportes</option>
+                  <option value="saude">Saúde</option>
+                </select>
+              </div>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Fechar
+              </button>
+              <button type="submit" class="btn btn-primary">Adicionar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
       <div
         id="liveToast"
@@ -302,7 +332,12 @@
         aria-atomic="true"
       >
         <div class="toast-header">
-          <img src="./img/logo.png"  height="20" class="rounded me-2" alt="..." />
+          <img
+            src="./img/logo.png"
+            height="20"
+            class="rounded me-2"
+            alt="..."
+          />
           <strong class="me-auto">Bem-vindo!</strong>
           <button
             type="button"
