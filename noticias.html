@@ -105,15 +105,255 @@
       </div>
     </nav>
 
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./img/girl1.jpg"
+            class="d-block w-100 img-destaque"
+            alt="..."
+          />
+          <div class="carousel-caption">
+            <h5>Notícia em destaque 1</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+              autem expedita porro, eligendi iusto quis.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./img/girl1.jpg"
+            class="d-block w-100 img-destaque"
+            alt="..."
+          />
+          <div class="carousel-caption">
+            <h5>Notícia em destaque 2</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+              autem expedita porro, eligendi iusto quis.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./img/girl1.jpg"
+            class="d-block w-100 img-destaque"
+            alt="..."
+          />
+          <div class="carousel-caption">
+            <h5>Notícia em destaque 3</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+              autem expedita porro, eligendi iusto quis.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="container my-3">
+      <button
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal2"
+      >
+        Adicionar notícia
+      </button>
+    </div>
+
     <section class="container my-3">
       <h3 id="esportes">Esportes</h3>
       <div id="grid-esportes" class="row"></div>
     </section>
 
     <section class="container my-3">
-        <h3 id="saude">Saúde</h3>
-        <div id="grid-saude" class="row"></div>
-      </section>
+      <h3 id="saude">Saúde</h3>
+      <div id="grid-saude" class="row"></div>
+    </section>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Notícia</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div id="modal-noticia" class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div
+        id="liveToast"
+        class="toast bg-secondary text-light"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <img
+            src="./img/logo.png"
+            height="20"
+            class="rounded me-2"
+            alt="..."
+          />
+          <strong class="me-auto">Bem-vindo!</strong>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">Estamos em manutenção!</div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal2"
+      tabindex="-1"
+      aria-labelledby="exampleModal2Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModal2Label">
+              Adicionar notícia
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form name="add_noticia">
+              <div class="mb-3">
+                <label for="titulo">Título</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="titulo"
+                  id="titulo"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="img">Imagem</label>
+                <input
+                  type="file"
+                  accept=".jpg,.png"
+                  class="form-control"
+                  name="img"
+                  id="img"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="desc">Descrição</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="desc"
+                  id="desc"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="categoria">Categoria</label>
+                <select
+                  name="categoria"
+                  id="categoria"
+                  class="form-select"
+                  required
+                >
+                  <option selected disabled>Selecione uma categoria</option>
+                  <option value="esportes">Esportes</option>
+                  <option value="saude">Saúde</option>
+                </select>
+              </div>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Fechar
+              </button>
+              <button type="submit" class="btn btn-primary">Adicionar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./scripts/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="./scripts/main.js"></script>

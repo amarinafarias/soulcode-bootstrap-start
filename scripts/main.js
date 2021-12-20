@@ -102,11 +102,10 @@ class NoticiasBuilder {
   build(categoria) {
     let noticiasHtml = "";
 
-    const noticiasFiltro = news
-      .filter((news) => news.categoria === categoria)
+    const noticiasFiltro = news.filter((news) => news.categoria === categoria);
 
-      noticiasFiltro.forEach((news) => {
-        noticiasHtml += `
+    noticiasFiltro.forEach((news) => {
+      noticiasHtml += `
       <div class="col-md-6 col-lg-4 col-xl-3 mt-3">
           <div class="card">
             <div class="card-header">
@@ -115,20 +114,46 @@ class NoticiasBuilder {
             <div class="card-body">
               <h5 class="card-title">${news.titulo}</h5>
               <p class="card-text">${news.desc}</p>
-              <a href="#" class="btn btn-primary">Ler mais</a>
+              <button class="btn btn-primary" onclick="openModal('${news.img}', '${news.titulo}', '${news.desc}')" >Ler mais</button>
             </div>
           </div>
         </div>
       `;
-      });
+    });
 
     return noticiasHtml;
   }
 }
 
-const noticias = new NoticiasBuilder();
-const gridEsportes = document.getElementById("grid-esportes");
-const gridSaude = document.getElementById("grid-saude");
+function openModal(img, titulo, desc) {
+  const modal = new bootstrap.Modal(document.getElementById("exampleModal"));
+  const bodyNoticia = document.getElementById("modal-noticia");
 
-if (gridEsportes) gridEsportes.innerHTML = noticias.build("esportes");
-if (gridSaude) gridSaude.innerHTML = noticias.build("saude");
+  bodyNoticia.innerHTML = `
+  <img src="${img}" class="img-fluid"/>
+  <h2>${titulo}</h2>
+  <p>${desc}</p>
+  `;
+  modal.show();
+}
+
+function buildNoticias() {
+  const noticias = new NoticiasBuilder();
+  const gridEsportes = document.getElementById("grid-esportes");
+  const gridSaude = document.getElementById("grid-saude");
+
+  if (gridEsportes) gridEsportes.innerHTML = noticias.build("esportes");
+  if (gridSaude) gridSaude.innerHTML = noticias.build("saude");
+}
+
+function openToast() {
+  const el = document.getElementById("liveToast");
+
+  if (el) {
+    const toast = new bootstrap.Toast(el, {autohide: false});
+    toast.show();
+  }
+}
+
+buildNoticias();
+openToast();

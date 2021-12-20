@@ -8,6 +8,7 @@
     color: white;
     background-color: black;
     padding: 0px 8px;
+    z-index: 999;
 }
 
 .fullscreen-layout {
@@ -15,4 +16,10 @@
     flex-direction: column;
     height: 100vh;
     justify-content: space-between;
+}
+
+.img-destaque {
+    height: 256px;
+    object-fit: cover;
+    filter: brightness(70%) blur(0.75px);
 }
