@@ -150,10 +150,40 @@ function openToast() {
   const el = document.getElementById("liveToast");
 
   if (el) {
-    const toast = new bootstrap.Toast(el, {autohide: false});
+    const toast = new bootstrap.Toast(el, { autohide: false });
     toast.show();
   }
 }
 
 buildNoticias();
 openToast();
+
+const addNoticia = document.forms.add_noticia;
+
+if (addNoticia) {
+  addNoticia.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const titulo = addNoticia.titulo.value;
+    const desc = addNoticia.desc.value;
+    const categoria = addNoticia.categoria.value;
+    const img = addNoticia.img.files[0];
+
+    // console.log(addNoticia.img.value);
+
+    let reader = new FileReader();
+
+    reader.onload = function (e) {
+      news.push({
+        titulo: titulo,
+        desc: desc,
+        categoria: categoria,
+        img: e.target.result,
+      });
+
+      buildNoticias();
+    };
+
+    reader.readAsDataURL(img);
+  });
+}
