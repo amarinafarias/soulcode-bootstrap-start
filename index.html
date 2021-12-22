@@ -1,107 +1,210 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="./styles/bootstrap-5.1.3/css/bootstrap.min.css"
-    />
-    <title>Oi, mundo!</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/"
-          ><img src="./img/logo.png" height="32" style="filter: invert()"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div
-          class="offcanvas offcanvas-end bg-primary"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <img src="./img/logo.png" height="32" style="filter: invert()" />
-            <button
-              type="button"
-              class="btn-close text-reset"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="offcanvasNavbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  >Notícias
-                </a>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="offcanvasNavbarDropdown"
-                >
-                  <li>
-                    <a class="dropdown-item" href="./noticias.html"
-                      >Todas as notícias</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="./noticias.html#esportes"
-                      >Esportes</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="./noticias.html#saude"
-                      >Saúde</a
-                    >
-                  </li>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./styles/bootstrap-5.1.3/css/bootstrap.min.css" />
+  <title>Oi, mundo!</title>
+</head>
 
-                  <li>
-                    <a class="dropdown-item" href="./noticias.html#politica"
-                      >Política</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="./noticias.html#famosos"
-                      >Famosos</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./login.html"
-                  >Login</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Cadastro</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./feedback.html"
-                  >Contate-nos</a
-                >
-              </li>
-            </ul>
+<body>
+  <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img src="./img/logo.png" height="32" style="filter: invert()" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <img src="./img/logo.png" height="32" style="filter: invert()" />
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Notícias
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="./noticias.html">Todas as notícias</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./noticias.html#esportes">Esportes</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./noticias.html#saude">Saúde</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="./noticias.html#politica">Política</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./noticias.html#famosos">Famosos</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Cadastro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./feedback.html">Contate-nos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--JUMBOTRON -->
+  <div class="bg-primary text-white my-3 mx-2 rounded-3">
+    <div class="container-fuid py-5 px-5">
+      <img src="./img/logo.png" height="48" class="invert"/>
+      <h2 class="display-5">As melhores notícias estão aqui!</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat
+        rerum, est facilis ad dolore dignissimos quasi temporibus.
+      </p>
+      <hr />
+      <a href="./noticias.html" class="btn btn-dark btn-lg">Ler notícias</a>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="container-fluid">
+    <h2 class="display-6">Assine nossa newsletter</h2>
+    <hr />
+    <form>
+      <div class="row align-items-center">
+        <div class="col-sm-5">
+          <input type="text" class="form-control mt-1" placeholder="Seu primeiro nome" />
+        </div>
+        <div class="col-sm-5">
+          <input type="email" class="form-control mt-1" placeholder="email@exemplo.com" />
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mt-1">Assinar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Spinner  -->
+  <div class="container my-5 text-center">
+    <h2 class="display-6">Notícias recentes</h2>
+    <div id="loader" class="spinner-border text primary"></div>
+
+    <div id="grid-recentes" class="row"></div>
+  </div>
+
+
+
+  <!--CARDS + BADGES-->
+  <div class="container">
+    <h2 class="display-6 text-center">Assinatura mensal</h2>
+    <div class="row">
+
+      <div class="col-sm-6 col-xl">
+        <div class="card bg-primary text-light mb-3">
+          <div class="card-body">
+            <h5 class="display-6">R$25,00/mês</h5>
+            <h6 class="card-subtitle badge bg-success">Plano Bem Informado</h6>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Nemo itaque reiciendis accusantium. Neque, maiores perspiciatis.
+              Labore nulla commodi enim beatae rerum dolorum ab ullam.
+            </p>
           </div>
         </div>
       </div>
-    </nav>
-    <script src="./scripts/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
-  </body>
+
+        <div class="col-sm-6 col-xl">
+          <div class="card bg-dark text-light mb-3">
+            <div class="card-body">
+              <h5 class="display-6">R$55,00/mês</h5>
+              <h6 class="card-subtitle badge bg-success">Plano WhatsApp</h6>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nemo itaque reiciendis accusantium. Neque, maiores perspiciatis.
+                Labore nulla commodi enim beatae rerum dolorum ab ullam.
+              </p>
+            </div>
+          </div>
+        </div>
+
+          <div class="col-sm-6 col-xl">
+            <div class="card bg-warning mb-3">
+              <div class="card-body">
+                <h5 class="display-6">R$125,00/mês</h5>
+                <h6 class="card-subtitle badge bg-dark">Plano Premium</h6>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo itaque reiciendis accusantium. Neque, maiores perspiciatis.
+                  Labore nulla commodi enim beatae rerum dolorum ab ullam.
+                </p>
+              </div>
+            </div>
+          </div>
+
+            <div class="col-sm-6 col-xl">
+              <div class="card bg-info mb-3">
+                <div class="card-body">
+                  <h5 class="display-6">R$999,00/mês</h5>
+                  <h6 class="card-subtitle badge bg-dark">Plano Pratinum Top</h6>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nemo itaque reiciendis accusantium. Neque, maiores perspiciatis.
+                    Labore nulla commodi enim beatae rerum dolorum ab ullam.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!--Termos-->
+            <div class="container">
+              <h2 class="display-6 text-center">Termos</h2>
+              <div class="row">
+                <div class="col-sm-6 col-lg">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nemo itaque reiciendis accusantium. Neque, maiores perspiciatis.
+                    Labore nulla commodi enim beatae rerum dolorum ab ullam.
+                  </p>
+                </div>
+
+                <div class="col-sm-6 col-lg">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nemo itaque reiciendis accusantium. Neque, maiores perspiciatis.
+                    Labore nulla commodi enim beatae rerum dolorum ab ullam.
+                  </p>
+                </div>
+
+                <div class="col-sm-6 col-lg">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nemo itaque reiciendis accusantium. Neque, maiores perspiciatis.
+                    Labore nulla commodi enim beatae rerum dolorum ab ullam.
+                  </p>
+                </div>
+
+                <div class="col-sm-6 col-lg">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nemo itaque reiciendis accusantium. Neque, maiores perspiciatis.
+                    Labore nulla commodi enim beatae rerum dolorum ab ullam.
+                  </p>
+                </div>
+              </div>
+              <script src="./scripts/main.js"></script>
+              <script src="./scripts/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
