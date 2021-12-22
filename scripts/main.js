@@ -141,9 +141,16 @@ function buildNoticias() {
   const noticias = new NoticiasBuilder();
   const gridEsportes = document.getElementById("grid-esportes");
   const gridSaude = document.getElementById("grid-saude");
+  const gridRecentes = document.getElementById("grid-recentes");
 
   if (gridEsportes) gridEsportes.innerHTML = noticias.build("esportes");
   if (gridSaude) gridSaude.innerHTML = noticias.build("saude");
+
+  // Isso é no index.html
+  if (gridRecentes) {
+    gridRecentes.innerHTML = noticias.build("recentes");
+    document.getElementById("loader").style.display = 'none';
+  }
 }
 
 function openToast() {
