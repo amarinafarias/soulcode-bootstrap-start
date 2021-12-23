@@ -186,11 +186,29 @@ if (addNoticia) {
         desc: desc,
         categoria: categoria,
         img: e.target.result,
-      });
+      });9
 
       buildNoticias();
     };
 
     reader.readAsDataURL(img);
+  });
+}
+
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+const tooltips = tooltipTriggerList.map((el) => new bootstrap.Tooltip(el));
+
+//Validação com bootstrap
+const testeBootstrap = document.forms.testeBootstrap;
+
+if(testeBootstrap) {
+  testeBootstrap.addEventListener("submit", function (e){
+    e.preventDefault();
+   
+    //if (!testeBootstrap.checkValidity()){
+      
+      //console.log("Inválido");
+    //}
+    testeBootstrap.classList.add("was-validated");
   });
 }
